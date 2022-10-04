@@ -1,3 +1,8 @@
 import styled from 'styled-components'
 
-const Base = styled.div``
+const FilterStyle = styled.div`
+  display: flex;
+  margin: 1%;
+`
+
+export default FilterStyle
