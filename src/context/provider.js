@@ -4,7 +4,9 @@ import PropTypes from 'prop-types';
 export const Context = createContext();
 
 function Provider({ children }) {
-  const states = {};
+  const [search, setSearch] = useState('');
+
+  const states = { search, setSearch };
 
   return (
     <Context.Provider value={ states }>
