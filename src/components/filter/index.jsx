@@ -6,7 +6,7 @@ import FilterStyle from './style.js'
 export default function Filter() {
   const { search, setSearch } = useContext(Context)
 
-  const captureText = ({ target }) => {
+  const captureTextSearch = ({ target }) => {
     const { value } = target
     setSearch(value)
   }
@@ -16,7 +16,7 @@ export default function Filter() {
       <input
         type="text"
         placeholder="Insert"
-        onChange={ captureText }
+        onChange={ captureTextSearch }
       />
       <p>Filter by:</p>
       <Button nameBtn="Movies" />
