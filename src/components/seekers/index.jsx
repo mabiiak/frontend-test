@@ -4,34 +4,32 @@ import Button from '../button'
 import FormStyle from './style.js'
 
 export default function Seekers() {
-  const { search, setSearch, setTypeSearch } = useContext(Context)
+  const { search, setSearch } = useContext(Context)
 
   const captureText = ({ target }) => {
-    const { value, name } = target
-    if (name === 'seekers') setTypeSearch(value)
-    if (name === 'input') setSearch(value)
+    const { value } = target
+    setSearch(value)
   }
 
   return(
     <FormStyle>
-      <input
-        name="input"
-        type="text"
-        placeholder="Type your seach"
-        onChange={ captureText }
-        value={ search }
-      />
-
-      <p>Search by:</p>
-
-      <select name="seekers" onChange={ captureText }>
-        <option disabled selected>Select your option</option>
-        <option>Movies</option>
-        <option>Characters</option>
-        <option>Locations</option>
-      </select>
-
-      <Button nameBtn="See all" />
+      <div id="all">
+        <Button nameProp="allMovies" textBtn="All Movies" />
+        <Button nameProp="" textBtn="All Characters" />
+        <Button nameProp="" textBtn="All Locations" />
+      </div>
+      <div id="filter">
+        <input
+          name="input"
+          type="text"
+          placeholder="Type your seach"
+          onChange={ captureText }
+          value={ search }
+        />
+        <Button nameProp="findMovie" textBtn="Search movies"/>
+        <Button nameProp="findCharacters" textBtn="Search characters"/>
+        <Button nameProp="findLocations" textBtn="Search locations"/>
+      </div>
     </FormStyle>
   )
 }
