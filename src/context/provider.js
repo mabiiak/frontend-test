@@ -5,8 +5,9 @@ export const Context = createContext();
 
 function Provider({ children }) {
   const [search, setSearch] = useState('');
+  const [data, setData] = useState([]);
 
-  const states = { search, setSearch };
+  const states = { search, setSearch, data, setData };
 
   return (
     <Context.Provider value={ states }>
