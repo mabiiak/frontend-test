@@ -4,7 +4,7 @@ import Button from '../button'
 import FilterStyle from './style.js'
 
 export default function Filter() {
-  const { search, setSearch } = useContext(Context)
+  const { setSearch } = useContext(Context)
 
   const captureTextSearch = ({ target }) => {
     const { value } = target
