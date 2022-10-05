@@ -1,12 +1,16 @@
 import React from 'react';
+import CardMovie from './style';
 
 export default function Card({ image, title, description, director, year }) {
   return(
-    <div>
+    <CardMovie>
       <img src={ image } alt={`banner from movie ${ title }`} />
-      <p>{ year }</p>
-      <h3>{ title }</h3>
-      <p>{ description }</p>
-    </div>
+      <div id="informations">
+        <h2>{ title }</h2>
+        <p>{ year }</p>
+        <p>Director: { director }</p>
+        <p>{ description }</p>
+      </div>
+    </CardMovie>
   )
 }

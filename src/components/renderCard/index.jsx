@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import { Context } from '../../context/provider'
 import fetchMovies from '../../utils/fetchMovies';
 import Card from '../card';
+import DisplayCards from './style';
 
 export default function RenderCard() {
   const { data, setData } = useContext(Context)
@@ -14,7 +15,7 @@ export default function RenderCard() {
   useEffect(() => { itensRender() }, [])
 
   return(
-    <section>
+    <DisplayCards>
       {
         data.map((movie) => (
           <Card
@@ -26,6 +27,6 @@ export default function RenderCard() {
           />
         ))
       }
-    </section>
+    </DisplayCards>
   )
 }
