@@ -1,4 +1,4 @@
-const axios = require("axios")
+import axios from 'axios';
 
 const fetchMovies = async () => {
   const URL = 'https://ghibliapi.herokuapp.com/films'
