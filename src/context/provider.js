@@ -5,7 +5,7 @@ export const Context = createContext();
 
 function Provider({ children }) {
   const [search, setSearch] = useState('');
-  const [typeSearch, setTypeSearch] = useState('Movies');
+  const [typeSearch, setTypeSearch] = useState('all');
   const [data, setData] = useState([]);
 
   const states = {
