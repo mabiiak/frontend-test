@@ -5,23 +5,25 @@ import Card from '../card';
 import DisplayCards from './style';
 
 export default function RenderCard() {
-  const { search, typeSearch, data, setData } = useContext(Context);
+  const { search, setSearch, typeSearch, data, setData } = useContext(Context);
 
-  const itensRender = async () => {
+  const allMovies = async () => {
+    const response = await fetchMovies();
+    setData(response);
+    setSearch('');
+  }
+
+  const filterMovies = async () => {
     const response = await fetchMovies()
-    setData(response)
+    const result = response.filter((movie) => movie.title.toLowerCase().includes(search))
+
+    setData(result)
   }
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
-    if (data.length === 0) itensRender()
-
-    const lengthMinSearch = search.length > 0;
-    const lengthMinData = data.length !== 0
-
-    if (lengthMinData && lengthMinSearch && typeSearch === "Movies"){
-      setData(data.filter((movie) => movie.title.toLowerCase().includes(search)))
-    }
+    if (typeSearch === "findMovie") filterMovies()
+    if (typeSearch === "allMovies") allMovies()
   }, [search, typeSearch])
 
   return(
