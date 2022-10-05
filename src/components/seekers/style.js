@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
-const FilterStyle = styled.div`
+const FormStyle = styled.div`
   display: flex;
   margin: 1%;
 `
 
-export default FilterStyle
+export default FormStyle
