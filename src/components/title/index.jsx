@@ -1,9 +1,11 @@
 import React from 'react';
+import logo from '../../images/logo-ghibli.png'
+import HeaderStyle from './style'
 
 export default function Title() {
   return(
-    <header>
-      <h1>Search Ghibli</h1>
-    </header>
+    <HeaderStyle>
+      <img src={ logo } alt="logo studio ghibli" />
+    </HeaderStyle>
   )
 }
