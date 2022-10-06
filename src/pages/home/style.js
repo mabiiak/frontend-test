@@ -1,3 +1,9 @@
 import styled from 'styled-components'
 
-const Base = styled.div``
+const HomeStyle = styled.div`
+  display: flex; 
+  justify-content: center;
+  flex-direction: column; 
+`
+
+export default HomeStyle
