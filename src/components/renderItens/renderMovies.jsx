@@ -24,27 +24,27 @@ export default function RenderMovies() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     allMovies();
-    if (typeSearch === "findMovie") filterMovies();
+    if (typeSearch === "Movies") filterMovies();
   }, [search, typeSearch])
 
   return(
     <section>
-      <h2>Movies</h2>
-        <DisplayCards>
-          {
-            movies.length > 0 &&
-            movies.map((movie) => (
-                <CardMovie
-                  key={ movie.id }
-                  image={ movie.image }
-                  title={ movie.title }
-                  description={ movie.description }
-                  director={ movie.director }
-                  year={ movie.release_date }
-                />
-              ))
-          }
-        </DisplayCards>
+      <h2 id="all-movies">Movies</h2>
+      <DisplayCards>
+        {
+          movies.length > 0 &&
+          movies.map((movie) => (
+              <CardMovie
+                key={ movie.id }
+                image={ movie.image }
+                title={ movie.title }
+                description={ movie.description }
+                director={ movie.director }
+                year={ movie.release_date }
+              />
+            ))
+        }
+      </DisplayCards>
     </section>
   )
 }

@@ -14,11 +14,11 @@ export default function RenderCharacteres() {
   }
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect(() => {  allCharacteres() }, [search, typeSearch])
+  useEffect(() => { allCharacteres() }, [search, typeSearch])
 
   return(
     <section>
-      <h2>Characteres</h2>
+      <h2 id="all-characteres">Characteres</h2>
       {
         characters.length > 0 &&
         characters.map((char) => {
