@@ -15,8 +15,8 @@ export default function Seekers() {
     <FormStyle>
       <div id="all">
         <Button nameProp="allMovies" textBtn="All Movies" />
-        <Button nameProp="" textBtn="All Characters" />
-        <Button nameProp="" textBtn="All Locations" />
+        <Button nameProp="allCharacteres" textBtn="All Characters" />
+        <Button nameProp="allLocations" textBtn="All Locations" />
       </div>
       <div id="filter">
         <input
