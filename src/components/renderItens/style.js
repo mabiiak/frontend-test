@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
-const DisplayCards = styled.section`
+const DisplayCards = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: left;
-  margin: 0 15vw;
+  justify-content: space-between;
+  margin: 0 10vw;
   max-width: 100vw;
 `
 

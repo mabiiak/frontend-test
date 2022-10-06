@@ -6,15 +6,18 @@ export const Context = createContext();
 function Provider({ children }) {
   const [search, setSearch] = useState('');
   const [typeSearch, setTypeSearch] = useState('all');
-  const [data, setData] = useState([]);
+  const [movies, setMovies] = useState([]);
+  const [characters, setCharacters] = useState([]);
 
   const states = {
     search,
     setSearch,
-    data,
-    setData,
     typeSearch,
-    setTypeSearch
+    setTypeSearch,
+    movies,
+    setMovies,
+    characters,
+    setCharacters
   };
 
   return (
