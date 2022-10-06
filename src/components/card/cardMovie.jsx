@@ -1,9 +1,9 @@
 import React from 'react';
-import CardMovie from './style';
+import CardMovieStyle from './style';
 
-export default function Card({ image, title, description, director, year }) {
+export default function CardMovie({ image, title, description, director, year }) {
   return(
-    <CardMovie>
+    <CardMovieStyle>
       <img src={ image } alt={`banner from movie ${ title }`} />
       <div id="informations">
         <h2>{ title }</h2>
@@ -11,6 +11,6 @@ export default function Card({ image, title, description, director, year }) {
         <p>Director: { director }</p>
         <p>{ description }</p>
       </div>
-    </CardMovie>
+    </CardMovieStyle>
   )
 }
