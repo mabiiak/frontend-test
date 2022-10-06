@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import fetchMovies from '../../utils/fetchMovies';
+import fetchGhibli from '../../utils/fetch';
 
 export default function CardCharacter({ name, age, gender, eye_color, hair_color, specie, films }) {
   const [listMovies, setList] = useState([]);
   const [seeSpecie, setSpecie] = useState('');
 
   const findMovies = async (URL) => {
-    const response = await fetchMovies(URL);
+    const response = await fetchGhibli(URL);
     setList((old) => [...old, response.title]);
   }
 
   const findSpecie = async (URL) => {
-    const response = await fetchMovies(URL);
+    const response = await fetchGhibli(URL);
     setSpecie(response.name);
   }
 
@@ -23,7 +23,7 @@ export default function CardCharacter({ name, age, gender, eye_color, hair_color
 
   return(
     <div>
-      <h2>Name: { name }</h2>
+      <h3>Name: { name }</h3>
       <p>Age: { age }</p>
       <p>Gender: { gender }</p>
       <p>Eye color: { eye_color }</p>

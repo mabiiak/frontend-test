@@ -1,8 +1,6 @@
 import axios from 'axios';
 
-const fetchMovies = async () => {
-  const URL = 'https://ghibliapi.herokuapp.com/films'
-
+const fetchGhibli = async (URL) => {
   const response = await axios.get(URL)
     .then((res) => res.data)
     .catch((error) => console.log(error))
@@ -10,4 +8,4 @@ const fetchMovies = async () => {
   return response
 }
 
-export default fetchMovies
+export default fetchGhibli
