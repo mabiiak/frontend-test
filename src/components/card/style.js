@@ -1,25 +1,31 @@
 import styled from 'styled-components'
+import { bgCardColor } from '../../colors'
 
-const CardMovie = styled.div`
-  align-items: center;
-  background-color: wheat;
+const CardMovieStyle = styled.div`
+  background-color: ${bgCardColor};
+  border-radius: 1.5%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin: 1%;
-  width: 30%;
+  height: 520px;
+  margin: 0.5%;
+  width: 19%;
 
   img {
+    padding: 2.5%;
     width: 95%;
   }
 
   #informations {
     align-items: center;
-    background-color: wheat;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+
+    h2 {
+      text-align: center;
+      width: 90%;
+      margin-bottom: 2%;
+    }
   }
 `
 
-export default CardMovie
+export default CardMovieStyle
