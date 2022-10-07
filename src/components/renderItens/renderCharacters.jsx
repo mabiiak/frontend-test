@@ -2,9 +2,10 @@ import React, { useContext, useEffect } from 'react';
 import { Context } from '../../context/provider'
 import fetchGhibli from '../../utils/fetch';
 import CardCharacter from '../card/cardCharacter';
+import DisplayCards from './style';
 
 export default function RenderCharacteres() {
-  const { search, setSearch, typeSearch, characters, setCharacters } = useContext(Context);
+  const { search, typeSearch, characters, setCharacters } = useContext(Context);
 
   const allCharacteres = async () => {
     const URL = 'https://ghibliapi.herokuapp.com/people'
@@ -14,15 +15,14 @@ export default function RenderCharacteres() {
   }
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect(() => { allCharacteres() }, [search, typeSearch])
+  // useEffect(() => { allCharacteres() }, [])
 
   return(
-    <section>
-      <h2 id="all-characteres">Characteres</h2>
+    <DisplayCards>
+      <span id="all-characteres"/>
       {
         characters.length > 0 &&
-        characters.map((char) => {
-          return(
+        characters.map((char) => (
           <CardCharacter
             key={ char.name }
             name={ char.name }
@@ -33,8 +33,8 @@ export default function RenderCharacteres() {
             specie={ char.species }
             films={ char.films }
           />
-        )})
+        ))
       }
-    </section>
+    </DisplayCards>
   )
 }

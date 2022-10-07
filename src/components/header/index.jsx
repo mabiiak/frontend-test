@@ -11,9 +11,14 @@ export default function Header() {
     name === 'type-search' ? setTypeSearch(value) : setSearch(value)
   }
 
+  const clickTitle = () => {
+    setTypeSearch('Select your option');
+    setSearch('');
+  }
+
   return(
     <FormStyle>
-      <h1>Guide Ghibli</h1>
+      <h1 onClick={ clickTitle }>Guide Ghibli</h1>
       <input
         name="input"
         type="text"
@@ -29,7 +34,7 @@ export default function Header() {
         <option>Locations</option>
       </select>
   
-      <Button nameProp="true" textBtn="Search"/>
+      <Button textBtn="Search"/>
 
       <nav>
         <a href='#all-movies'>Movies</a>
