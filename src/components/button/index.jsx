@@ -18,7 +18,7 @@ export default function Button({ textBtn, id }) {
     const response = await fetchGhibli(URL);
     const result = response.filter((movie) => movie.title.toLowerCase().includes(search));
     
-    setMovies(result);
+    result.length === 0 ? setMovies("empty") : setMovies(result);
     setSearch('');
   }
 
@@ -28,7 +28,7 @@ export default function Button({ textBtn, id }) {
     const response = await fetchGhibli(URL);
     const result = response.filter((movie) => movie.name.toLowerCase().includes(search));
   
-    setCharacters(result);
+    result.length === 0 ? setCharacters("empty") : setCharacters(result);
     setSearch('');
   }
 
@@ -38,7 +38,7 @@ export default function Button({ textBtn, id }) {
     const response = await fetchGhibli(URL);
     const result = response.filter((movie) => movie.name.toLowerCase().includes(search));
   
-    setLocations(result);
+    result.length === 0 ? setLocations("empty") : setLocations(result);
     setSearch('');
   }
 
