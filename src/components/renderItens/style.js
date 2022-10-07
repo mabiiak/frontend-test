@@ -6,6 +6,7 @@ const DisplayCards = styled.div`
   justify-content: left;
   margin: 0 3vw;
   max-width: 100vw;
+  margin-bottom: 5vh;
 
   h2 {
     margin: 0 3vw;
