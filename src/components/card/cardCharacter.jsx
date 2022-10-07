@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import fetchGhibli from '../../utils/fetch';
+import { CardCharacterStyle } from './style';
 
 export default function CardCharacter({ name, age, gender, eye_color, hair_color, specie, films }) {
   const [listMovies, setList] = useState([]);
@@ -22,19 +23,17 @@ export default function CardCharacter({ name, age, gender, eye_color, hair_color
   }, [])
 
   return(
-    <div>
-      <h3>Name: { name }</h3>
-      <p>Age: { age }</p>
-      <p>Gender: { gender }</p>
-      <p>Eye color: { eye_color }</p>
-      <p>Hair color: { hair_color }</p>
-      <p>Specie: { seeSpecie }</p>
-      <p>Films:</p>
-      <ul>
+    <CardCharacterStyle>
+      <h3>{ name }</h3>
+      <p><b>Age:</b>{ age }</p>
+      <p><b>Gender: </b>{ gender }</p>
+      <p><b>Eye color: </b>{ eye_color }</p>
+      <p><b>Hair color: </b>{ hair_color }</p>
+      <p><b>Specie: </b>{ seeSpecie }</p>
+      <p id="list"><b>Films:</b></p>
         {
-          listMovies.map((film) => (<li>{ film }</li>))
+          listMovies.map((film) => (<p>{ film }</p>))
         }
-      </ul>
-    </div>
+    </CardCharacterStyle>
   )
 }
