@@ -8,6 +8,7 @@ function Provider({ children }) {
   const [typeSearch, setTypeSearch] = useState('Select your option');
   const [movies, setMovies] = useState([]);
   const [characters, setCharacters] = useState([]);
+  const [locations, setLocations] = useState([]);
 
   const states = {
     search,
@@ -18,6 +19,8 @@ function Provider({ children }) {
     setMovies,
     characters,
     setCharacters,
+    locations,
+    setLocations,
   };
 
   return (
