@@ -1,21 +1,10 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { Context } from '../../context/provider'
-import fetchGhibli from '../../utils/fetch';
 import CardCharacter from '../card/cardCharacter';
 import DisplayCards from './style';
 
 export default function RenderCharacteres() {
-  const { search, typeSearch, characters, setCharacters } = useContext(Context);
-
-  const allCharacteres = async () => {
-    const URL = 'https://ghibliapi.herokuapp.com/people'
-
-    const response = await fetchGhibli(URL);
-    setCharacters(response);
-  }
-
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  // useEffect(() => { allCharacteres() }, [])
+  const { characters } = useContext(Context);
 
   return(
     <DisplayCards>
