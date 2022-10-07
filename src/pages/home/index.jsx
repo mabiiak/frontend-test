@@ -1,14 +1,15 @@
 import React from 'react';
-import Title from '../../components/title'
-import Seekers from '../../components/seekers'
-import RenderCard from '../../components/renderCard';
+import Header from '../../components/header'
+import RenderMovies from '../../components/renderItens/renderMovies';
+import RenderCharacteres from '../../components/renderItens/renderCharacters';
+import HomeStyle from './style';
 
 export default function Home() {
   return(
-    <div>
-      <Title />
-      <Seekers />
-      <RenderCard />
-    </div>
+    <HomeStyle>
+      <Header />
+      <RenderMovies />
+      <RenderCharacteres />
+    </HomeStyle>
   )
 }
