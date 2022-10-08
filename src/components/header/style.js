@@ -1,71 +1,95 @@
 import styled from 'styled-components'
-import { btnColor, bgColor, bgCardColor, textColor } from '../../colors'
+import { bgButton, bgHeader, bgCards, colorTitle } from '../../colors'
 
 const FormStyle = styled.header`
+  align-items: center;
+  background-color: ${bgHeader};
   display: flex;
-  flex-direction: row;
-  height: 5vh;
-  justify-content: space-around;
-  margin: 0 3vw;
-  padding: 0.5%;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 30vh;
+  width: 100vw;
+  margin-bottom: 2%;
 
-  h1 {
-    color: ${ bgCardColor };
-    padding: 0.4%;
-    width: 14%;
-  }
-
-  input {
-    background-color: ${ bgColor };
-    border: solid 1px ${ bgCardColor };
-    color: ${ bgCardColor };
-    text-align: center;
-    width: 30%;
-  }
-
-  input::placeholder {
-    color: ${textColor};
-  }
-
-  select {
-    background-color: ${ bgColor };
-    border: solid 1px ${ bgCardColor };
-    border-left: none;
-    text-align: center;
-    width: 20%;
-  }
-  
-  button {
-    background: ${ bgColor };
-    border: solid 1px ${ bgCardColor };
-    border-left: none;
-    color: ${ btnColor };
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    text-transform: uppercase;
-    width: 10%;
-  }
-
-  button:hover {
-    cursor: grab
-  }
-
-  nav {
+  #first-line {
     display: flex;
-    flex-direction: row;
-    justify-content: right;
-    width: 25%;
+    justify-content: center;
+    margin-left: 40%;
+    /* background-color: orange; */
+    /* width: 30%; */
+
+    h1 {
+      align-items: flex-end;
+      color: ${ colorTitle };
+      display: flex;
+      font-size: 52px;
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+    }
+  
+    h1:hover {
+      cursor: grab
+    }
+
+    img {
+      width: 30%;
+      margin-left: 40%;
+    }
   }
 
-  a {
-    color: ${ btnColor };
-    font-size: 16px;
-    font-weight: bold;
-    padding: 3%;
-    text-decoration: none;
-    text-transform: uppercase;
+  #seekers {
+    display:flex;
+    align-items: stretch;
+    height: 8vh;
+    width: 100%;
+
+    input {
+      background-color: ${ bgHeader };
+      border: solid 1px ${ bgCards };
+      color: ${ bgCards };
+      text-align: center;
+      width: 50%;
+      height: 100%;
+      font-size: 15px;
+    }
+  
+    input::placeholder {
+      color: ${colorTitle};
+    }
+
+    input:active {
+      border: solid 1px ${ bgCards };
+    }
+  
+    select {
+      background-color: ${ bgHeader };
+      border: solid 1px ${ bgCards };
+      border-left: none;
+      text-align: center;
+      width: 29.6%;
+      height: 107.5%;
+      color: ${colorTitle};
+      font-size: 15px;
+    }
+    
+    button {
+      background: ${ bgButton };
+      border: solid 1px ${ bgCards };
+      border-left: none;
+      font-size: 20px;
+      text-align: center;
+      text-transform: uppercase;
+      width: 20%;
+      height: 108%;
+      color: ${ colorTitle };
+      font-family: 'Oswald', sans-serif;
+    }
+  
+    button:hover {
+      cursor: grab
+    }
   }
+
 `
 
 export default FormStyle
