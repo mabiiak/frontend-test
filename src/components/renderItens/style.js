@@ -2,12 +2,19 @@ import styled from 'styled-components'
 
 const DisplayCards = styled.section`
   display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
-  margin-bottom: 5vh;
+  flex-direction: column;
+  margin: 0 0.5%;
 
   h2 {
-    margin: 0 3vw;
+    margin: 1% auto;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+  }
+
+  div {
+    display: flex;
+    flex-wrap: wrap;
   }
 `
 

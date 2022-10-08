@@ -9,9 +9,11 @@ export default function Home() {
   return(
     <HomeStyle>
       <Header />
-      <RenderMovies />
-      <RenderCharacteres />
-      <RenderLocations />
+      <div id="filtered">
+        <RenderMovies />
+        <RenderCharacteres />
+        <RenderLocations />
+      </div>
     </HomeStyle>
   )
 }
