@@ -8,23 +8,21 @@ export default function RenderMovies() {
   const { movies } = useContext(Context);
 
   return(
-    <section>
-      <DisplayCards>
-        {
-          movies !== 'empty' ?
-          movies.map((movie) => (
-            <CardMovie
-              key={ movie.id }
-              image={ movie.image }
-              title={ movie.title }
-              description={ movie.description }
-              director={ movie.director }
-              year={ movie.release_date }
-            />
-          ))
-          : (<CardEmpty />)
-        }
-      </DisplayCards>
-    </section>
+    <DisplayCards>
+      {
+        movies !== 'empty' ?
+        movies.map((movie) => (
+          <CardMovie
+            key={ movie.id }
+            image={ movie.image }
+            title={ movie.title }
+            description={ movie.description }
+            director={ movie.director }
+            year={ movie.release_date }
+          />
+        ))
+        : (<CardEmpty />)
+      }
+    </DisplayCards>
   )
 }

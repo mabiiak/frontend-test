@@ -1,11 +1,9 @@
 import styled from 'styled-components'
 
-const DisplayCards = styled.div`
+const DisplayCards = styled.section`
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
-  margin: 0 3vw;
-  max-width: 100vw;
   margin-bottom: 5vh;
 
   h2 {

@@ -8,24 +8,22 @@ export default function RenderLocations() {
   const { locations } = useContext(Context);
 
   return(
-    <section>
-      <DisplayCards>
-        {
-          locations !== 'empty' ?
-          locations.map((local) => (
-            <CardLocation
-              key={ local.id }
-              name={ local.name }
-              climate={ local.climate }
-              terrain={ local.terrain }
-              surfaceWater={ local.surface_water }
-              residents={ local.residents }
-              films={ local.films }
-            />
-          ))
-          : (<CardEmpty />)
-        }
-      </DisplayCards>
-    </section>
+    <DisplayCards>
+      {
+        locations !== 'empty' ?
+        locations.map((local) => (
+          <CardLocation
+            key={ local.id }
+            name={ local.name }
+            climate={ local.climate }
+            terrain={ local.terrain }
+            surfaceWater={ local.surface_water }
+            residents={ local.residents }
+            films={ local.films }
+          />
+        ))
+        : (<CardEmpty />)
+      }
+    </DisplayCards>
   )
 }
