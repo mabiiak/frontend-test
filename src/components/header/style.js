@@ -1,40 +1,27 @@
 import styled from 'styled-components'
-import { bgButton, bgHeader, bgCards, colorTitle } from '../../colors'
+import { bgButton, bgPrincipal, bgCards, colorTitle } from '../../colors'
 
 const FormStyle = styled.header`
   align-items: center;
-  background-color: ${bgHeader};
+  background-color: ${bgPrincipal};
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   height: 30vh;
-  width: 100vw;
+  width: 99vw;
   margin-bottom: 2%;
 
-  #first-line {
+  h1 {
+    align-items: flex-end;
+    color: ${ colorTitle };
     display: flex;
-    justify-content: center;
-    margin-left: 40%;
-    /* background-color: orange; */
-    /* width: 30%; */
+    font-size: 52px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+  }
 
-    h1 {
-      align-items: flex-end;
-      color: ${ colorTitle };
-      display: flex;
-      font-size: 52px;
-      font-family: 'Oswald', sans-serif;
-      text-transform: uppercase;
-    }
-  
-    h1:hover {
-      cursor: grab
-    }
-
-    img {
-      width: 30%;
-      margin-left: 40%;
-    }
+  h1:hover {
+    cursor: grab
   }
 
   #seekers {
@@ -44,9 +31,9 @@ const FormStyle = styled.header`
     width: 100%;
 
     input {
-      background-color: ${ bgHeader };
-      border: solid 1px ${ bgCards };
-      color: ${ bgCards };
+      background-color: ${ bgPrincipal };
+      border: solid 1px ${ colorTitle };
+      color: ${ colorTitle };
       text-align: center;
       width: 50%;
       height: 100%;
@@ -62,20 +49,24 @@ const FormStyle = styled.header`
     }
   
     select {
-      background-color: ${ bgHeader };
-      border: solid 1px ${ bgCards };
+      background-color: ${ bgPrincipal };
+      border: solid 1px ${ colorTitle };
       border-left: none;
+      border-right: none;
       text-align: center;
       width: 29.6%;
-      height: 107.5%;
+      height: 107%;
       color: ${colorTitle};
       font-size: 15px;
+    }
+
+    option {
+      background-color: ${bgCards};
     }
     
     button {
       background: ${ bgButton };
-      border: solid 1px ${ bgCards };
-      border-left: none;
+      border: none;
       font-size: 20px;
       text-align: center;
       text-transform: uppercase;
@@ -89,7 +80,6 @@ const FormStyle = styled.header`
       cursor: grab
     }
   }
-
 `
 
 export default FormStyle
