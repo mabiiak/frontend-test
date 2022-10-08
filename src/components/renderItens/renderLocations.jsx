@@ -10,20 +10,25 @@ export default function RenderLocations() {
   return(
     <DisplayCards>
       {
-        locations !== 'empty' ?
-        locations.map((local) => (
-          <CardLocation
-            key={ local.id }
-            name={ local.name }
-            climate={ local.climate }
-            terrain={ local.terrain }
-            surfaceWater={ local.surface_water }
-            residents={ local.residents }
-            films={ local.films }
-          />
-        ))
-        : (<CardEmpty />)
+        locations.length !== 0 && (<h2>Locations</h2>)
       }
+      <div>
+        {
+          locations !== 'empty' ?
+          locations.map((local) => (
+            <CardLocation
+              key={ local.id }
+              name={ local.name }
+              climate={ local.climate }
+              terrain={ local.terrain }
+              surfaceWater={ local.surface_water }
+              residents={ local.residents }
+              films={ local.films }
+            />
+          ))
+          : (<CardEmpty />)
+        }
+      </div>
     </DisplayCards>
   )
 }
