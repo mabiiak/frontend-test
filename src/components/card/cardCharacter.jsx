@@ -25,12 +25,12 @@ export default function CardCharacter({ name, age, gender, eye_color, hair_color
   return(
     <CardCharacterStyle>
       <h3>{ name }</h3>
-      <p><b>Age:</b>{ age }</p>
+      <p><b>Age: </b>{ age }</p>
       <p><b>Gender: </b>{ gender }</p>
       <p><b>Eye color: </b>{ eye_color }</p>
       <p><b>Hair color: </b>{ hair_color }</p>
       <p><b>Specie: </b>{ seeSpecie }</p>
-      <p id="list"><b>Films:</b></p>
+      <p id="list"><b>Films: </b></p>
         {
           listMovies.map((film) => (<p>{ film }</p>))
         }

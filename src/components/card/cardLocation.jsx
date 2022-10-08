@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { CardCharacterStyle } from './style';
+import { CardLocalStyle } from './style';
 import fetchGhibli from '../../utils/fetch';
 
 export default function CardLocation({ name, climate, terrain, surfaceWater, residents, films }) {
@@ -24,7 +24,7 @@ export default function CardLocation({ name, climate, terrain, surfaceWater, res
   }, [])
 
   return(
-    <CardCharacterStyle>
+    <CardLocalStyle>
       <h3>{ name }</h3>
       <p>
         { climate === 'TODO' ? (<span/>) : (<p><b>Climate:</b> { name }</p>) }
@@ -43,6 +43,6 @@ export default function CardLocation({ name, climate, terrain, surfaceWater, res
       {
         listMovies.map((film) => <p>{film }</p>)
       }
-    </CardCharacterStyle>
+    </CardLocalStyle>
   )
 }
