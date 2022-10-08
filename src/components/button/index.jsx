@@ -10,6 +10,7 @@ export default function Button({ textBtn, id }) {
     setSearch,
     setCharacters,
     setLocations,
+    setTypeSearch,
   } = useContext(Context);
 
   const filterMovies = async () => {
@@ -46,6 +47,13 @@ export default function Button({ textBtn, id }) {
     if (typeSearch === 'Movies') filterMovies();
     if (typeSearch === 'Characters') filterCharacteres();
     if (typeSearch === 'Locations') filterLocations();
+
+    const options = document.querySelectorAll('select option')
+    for (let i = 0; i < options.length; i++) {
+      options[i].selected = options[i].defaultSelected;
+    }
+
+    setTypeSearch('Select your option')
   }
 
   return(

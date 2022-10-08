@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { Context } from '../../context/provider';
 import Button from '../button';
 import FormStyle from './style.js';
-import totoro from '../../images/totoro.png';
 
 export default function Header() {
   const { search, setSearch, setTypeSearch, setMovies, setCharacters, setLocations } = useContext(Context)
@@ -18,16 +17,19 @@ export default function Header() {
     setMovies([]);
     setCharacters([]);
     setLocations([]);
+    
+    const options = document.querySelectorAll('select option')
+    for (let i = 0; i < options.length; i++) {
+      options[i].selected = options[i].defaultSelected;
+    }
   }
 
   return(
     <FormStyle>
-      <div id="first-line">  
-        <h1 onClick={ clickTitle }>Guide Ghibli</h1>
-        <img src={ totoro } alt="tororo" />
-      </div>
+      <h1 onClick={ clickTitle }>Guide Ghibli</h1>
       <div id="seekers">
         <input
+          id="type-search"
           name="input"
           type="text"
           placeholder="Type your seach"
@@ -36,8 +38,8 @@ export default function Header() {
         />
 
         <select name="type-search" onChange={ captureText }>
-          <option disabled selected>Select your option</option>
-          <option>Movies</option>
+          <option selected>Select your option</option>
+          <option value="Movies">Movies</option>
           <option>Characters</option>
           <option>Locations</option>
         </select>
