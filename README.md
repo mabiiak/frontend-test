@@ -3,15 +3,17 @@
   Aqui você pode pesquisar por filmes, personagens e lugares dos filmes do studio ghibli.
 
 ## Desenvolvimento
-  ## Esse projeto foi desenvolvido com:
+  ### Esse projeto foi desenvolvido com:
 
-    - Javascript
+   - Javascript
 
-    - React
+   - React
+    
+   - Styled-components
 
-  ## API
+  ### API
 
-    Foi utilizando a [API's dos Estudios Ghibli](https://ghibliapi.herokuapp.com/).
+   Foi utilizando a [API's dos Estudios Ghibli](https://ghibliapi.herokuapp.com/).
 
   <details>
     <summary>
@@ -54,7 +56,7 @@
 
   </details>
 
-## Funções do projeto - ou melhorias
+## Funções do projeto
 
   - Realizar busca pelo nome de um filme
 
